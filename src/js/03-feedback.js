@@ -1,7 +1,7 @@
 import throttle from 'lodash.throttle';
 
 const form = document.querySelector('.feedback-form');
-const emailInput = document.getElementsByName('email');
+let emailInput = document.getElementsByName('email');
 const messageText = document.getElementsByName('message');
 const btn = document.querySelector('.btn');
 
@@ -9,9 +9,6 @@ const data = {
   email: '',
   message: '',
 };
-// function saveMessage(event) {
-// event.preventDefault();
-// localStorage.getItem('feedback-form-state', form.elements.value);}
 
 const setData = event => {
   data[event.target.name] = event.target.value;
