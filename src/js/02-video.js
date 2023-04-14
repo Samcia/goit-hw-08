@@ -15,4 +15,4 @@ const updateDelay = throttle(seconds => {
 }, 1000);
 
 //player.updateTime = () => player.setCurrentTime().then(updateDelay);
-player.setCurrentTime(saveVideoTime).then(updateDelay);
+player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
