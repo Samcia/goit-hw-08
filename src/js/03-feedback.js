@@ -21,7 +21,8 @@ const setData = event => {
   localStorage.setItem('feedback-form-state', JSON.stringify(data));
 };
 
-const submit = () => {
+const submit = event => {
+  event.preventDefault();
   localStorage.clear();
   form.reset();
 };
