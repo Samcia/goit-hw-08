@@ -16,8 +16,9 @@ const getDataFromLocalStorage = () => {
   messageText.value = saveData.message;
 };
 
-const setData = event => {
-  data[event.target.name] = event.target.value;
+const setData = () => {
+  data.email = emailInput.value;
+  data.message = messageText.value;
   localStorage.setItem('feedback-form-state', JSON.stringify(data));
 };
 
